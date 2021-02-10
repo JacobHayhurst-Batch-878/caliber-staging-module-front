@@ -17,6 +17,7 @@ import { UpdateItemComponent } from './components/update-item/update-item.compon
 import { ViewSwotComponent } from './components/view-swot/view-swot.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { CorsInterceptor } from './services/interceptor/cors.interceptor';
+import { JwtInterceptor } from './services/interceptor/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,13 @@ import { CorsInterceptor } from './services/interceptor/cors.interceptor';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [ {
-    provide: HTTP_INTERCEPTORS, useClass: CorsInterceptor, multi: true 
-  }
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true 
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: CorsInterceptor, multi: true 
+    },
   ],
   bootstrap: [AppComponent]
 })
