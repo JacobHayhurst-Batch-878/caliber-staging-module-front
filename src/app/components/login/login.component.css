@@ -114,7 +114,7 @@
 }
 
 .login-btn:hover {
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   text-decoration: underline;
 }
 /*Media Breakpoints*/
