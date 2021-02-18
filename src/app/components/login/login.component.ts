@@ -52,8 +52,6 @@ export class LoginComponent implements OnInit {
   }
 
   private giveUserFeedback(errorMessage: string) {
-    const myH1: HTMLHeadingElement = document.querySelector('h1');
-    console.log(myH1.innerHTML);
     const isPasswordWrong: boolean = errorMessage.includes('password');
     const emailEl: HTMLInputElement = document.querySelector('#email');
     const passwordEl: HTMLInputElement = document.querySelector('#password');
