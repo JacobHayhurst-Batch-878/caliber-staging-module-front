@@ -1,184 +1,186 @@
 * {
-    color: var(--light-gray);
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 .left {
-    background-color: var(--dark-gray);
-    height: 100%;
-    width: 20%;
-    -webkit-box-shadow: 4px 2px 5px 0px var(--black);
-    -moz-box-shadow: 4px 2px 5px 0px var(--black);
-    box-shadow: 4px 2px 5px 0px var(--black);
-    padding: 20px;
+  background-color: var(--dark-gray);
+  color: var(--dark-white);
+  height: 100%;
+  width: 20%;
+  -webkit-box-shadow: 4px 2px 5px 0px var(--black);
+  -moz-box-shadow: 4px 2px 5px 0px var(--black);
+  box-shadow: 4px 2px 5px 0px var(--black);
+  padding: 20px;
 }
 
 .title {
-    margin: 20px auto;
-    font-size: 1.2rem;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-align: center;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .app-description {
-    margin-top: 30px;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Futura Medium', monospace;
-    font-size: 1.1rem;
-    line-height: 2;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Futura Medium", monospace;
+  font-size: 1.1rem;
+  line-height: 2;
 }
 
 .right {
-    height: 100vh;
-    width: 80%;
-    text-align: center;
-    padding: 50px;
+  height: 100vh;
+  width: 80%;
+  text-align: center;
+  padding: 50px;
 }
 
 .left::after,
 .right::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .login-form {
-    padding: 50px;
-    width: 50%;
-    margin: auto;
+  background-color: var(--dark-gray);
+  border-radius: 4px;
+  box-shadow: 3px 3px 4px 2px var(--light-gray);
+  color: var(--white);
+  padding: 50px;
+  width: 50%;
+  margin: auto;
+}
+
+.login-form h2 {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .form-label {
-    float: left;
-    font-size: 1.2rem;
-}
-
-.form-label:nth-child(1),
-.form-control:nth-child(1) {
-    /* animation: fadeInUp;
-     referring directly to the animation's @keyframe declaration 
-    animation-duration: 2.3s;
-     don't forget to set a duration!  */
-}
-
-.form-label:nth-child(2),
-.form-control:nth-child(2) {
-    /* animation: fadeInUp;
-     referring directly to the animation's @keyframe declaration 
-    animation-duration: 2.5s;
-     don't forget to set a duration!  */
+  float: left;
+  font-size: 1.2rem;
 }
 
 .form-label::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .form-control {
-    margin: 50px auto;
-    padding: 10px;
+  margin: 50px auto;
+  padding: 10px;
 }
 
 .form-control:focus,
-.login-btn:focus{
-    border-color: var(--orange);
-    box-shadow: 0 0 0 0.2rem var(--orange);
+.login-btn:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 0.2rem var(--orange);
 }
 
 .login-btn {
-    padding: 10px 20px;
-    background-color: var(--orange);
-    color: var(--white);
-    border: none;
-    border-radius: 10px;
-    transition: 0.4s ease-in-out;
-    /* animation: fadeInUp;
-    referring directly to the animation's @keyframe declaration 
-    animation-duration: 3s;
-     don't forget to set a duration!  */
+  padding: 10px 20px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.login-form__group {
+  position: relative;
+  margin: 2.8rem 0;
+}
+
+.form__error {
+  color: red;
+  position: absolute;
+  top: 4.4rem;
+  text-shadow: 0 0 0.1px var(--dark-white);
+}
+
+.border-error {
+  border: 1px solid red;
+  box-shadow: 0 0 1px 1px red;
 }
 
 .login-btn:hover {
-    background-color: var(--dark-gray);
-    text-decoration: underline;
+  background-color: var(--dark-gray);
+  text-decoration: underline;
 }
-.navbar{
-    /* animation: fadeInLeft;
-    animation-duration: 2.5s; */
-}
-
 /*Media Breakpoints*/
 
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    .left {
-        width: 30%;
-        height: 100%;
-        padding: 10px;
-    }
-    .title {
-        font-size: 0.7rem;
-        letter-spacing: normal;
-    }
-    
-    .app-description {
-        font-size: 0.6rem;
-        line-height: 1;
-    }
-    .right {
-        width: 70%;
-        height: 100%;
-        padding: 0 0 0 0;
-    }
+  .left {
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+  }
+  .title {
+    font-size: 0.7rem;
+    letter-spacing: normal;
+  }
 
-    .login-form {
-        margin: 0;
-    }
-    .form-label {
-        font-size: 0.8rem;
-    }
-    .form-control{
-        width: auto;
-        padding: 10px;
-    }
-    .login-btn{
-        width: 100px;
-        height: 40px;
-    }
+  .app-description {
+    font-size: 0.6rem;
+    line-height: 1;
+  }
+  .right {
+    width: 70%;
+    height: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .login-form {
+    margin: 0;
+  }
+
+  .form-label {
+    font-size: 0.8rem;
+  }
+  .form-control {
+    width: auto;
+    padding: 10px;
+  }
+  .login-btn {
+    width: 100px;
+    height: 40px;
+  }
 }
-
 
 /* iPads (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .title {
-        font-size: 1rem;
-        letter-spacing: normal;
-    }
-    
-    .app-description {
-        font-size: 0.9rem;
-        line-height: 1;
-    }
+  .title {
+    font-size: 1rem;
+    letter-spacing: normal;
+  }
 
-    .form-label {
-        font-size: 0.8rem;
-    }
-    .form-control{
-        width: auto;
-        padding: 10px;
-    }
-    .login-btn{
-        width: 100px;
-        height: 40px;
-    }
+  .app-description {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  .form-label {
+    font-size: 0.8rem;
+  }
+  .form-control {
+    width: auto;
+    padding: 10px;
+  }
+  .login-btn {
+    width: 100px;
+    height: 40px;
+  }
 }
