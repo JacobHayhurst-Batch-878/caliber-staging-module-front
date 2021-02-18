@@ -70,7 +70,7 @@ export class ViewSwotComponent implements OnInit {
    * This method pulls the SWOT analysis data from the backend
    */
   pullSwotData() {
-    const associateId = +this.route.snapshot.paramMap
+    const associateId: number =+ this.route.snapshot.paramMap
       .get('associateId')!
       .valueOf();
     this.swotService
