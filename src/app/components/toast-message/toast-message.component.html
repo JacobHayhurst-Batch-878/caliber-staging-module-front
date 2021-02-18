@@ -3,7 +3,7 @@
     *ngFor="let toast of toastService.toasts"
     [header]="toast.header"
     [autohide]="true"
-    [delay]="3000"
+    [delay]="2000"
     (hidden)="toastService.remove(toast)"
     [animation]="true"
   >
